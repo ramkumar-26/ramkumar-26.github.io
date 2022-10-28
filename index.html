@@ -4,9 +4,75 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./CSS/styles.css">
+    <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  <link rel="stylesheet"
+  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
 <body>
-    <h1>This is Ramkumar!</h1>
+    <!---Header Section-->
+    <header class="header">
+        <nav class="nav bd_grid">
+            <div>
+                <a href="#" class="nav_logo">
+                    Rkumar
+                </a>
+            </div>
+            <div class="nav_menu" id="nav_menu">
+                <ul class="nav_list">
+                    <li class="nav_items">
+                        <a href="#home" class="nav_link active">Home</a>
+                    </li>   
+                    <li class="nav_items">
+                        <a href="#about" class="nav_link active">About</a>
+                    </li> 
+                    <li class="nav_items">
+                        <a href="#home" class="nav_link active">Skills</a>
+                    </li>
+                    <li class="nav_items">
+                        <a href="#home" class="nav_link active">Work</a>
+                    </li >    
+                    <li class="nav_items">
+                        <a href="#home" class="nav_link active">Contact</a>
+                    </li>    
+                </ul>
+            </div>
+            <div class="nav_toggle" id="nav_toggle">
+                <i class='bx bx-menu-alt-right'></i>
+            </div>
+            
+        </nav>
+    </header>
+
+    <main class="main">
+        <!--Home section-->
+        <section class="home bd_grid" id="home">
+            <div class="home_data">
+                <h1 class="home_title">
+                    Hi, <br />I'm <span class="home_title_color">
+                            Ramkumar
+                    </span><br /> Java Developer
+                </h1>
+                <a href="#contact" class="home_button"></a>
+            </div>
+            <div class="home_social">
+                <a href="#" class="home_social_icon">
+                    <i class='bx bxl-linkedin'></i>
+                </a>
+            </div>
+        </section>
+        <!--About section-->
+        <!--Skills section-->
+        <!--Work section-->
+        <!--Contact section-->
+
+    </main>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./JS/main.js"></script>
 </body>
 </html>
