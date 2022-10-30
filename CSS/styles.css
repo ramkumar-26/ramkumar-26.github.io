@@ -173,3 +173,141 @@ img{
 .show{
     right: 0;
 }
+
+.home{
+    height: calc(100vh - 3rem);
+    row-gap: 1rem;
+}
+
+.home_data{
+    align-self: center;
+}
+
+.home_title{
+    font-size: var(--big-font-size);
+    margin-bottom: var(--mb-5);
+}
+
+.home_title_color{
+    color: var(--first-color);
+}
+
+.home_social{
+    display: flex;
+    flex-direction: column;
+}
+
+.home_social_icon{
+    width: max-content;
+    margin-bottom: var(--mb-2);
+    font-size: 1.5rem;
+    color: var(--second-color);
+
+}
+
+.home_social_icon:hover{
+    color: var(--first-color);
+}
+
+.home_img{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 350px;
+}
+
+.home_img svg{
+    width: 100%;
+}
+
+/* buttons */
+
+.button{
+    display: inline-block;
+    color: #fff;
+    padding: .75rem 2.5rem;
+    font-weight: var(--font-semi);
+    border-radius: 0.5rem;
+    background: var(--gradient-color);
+}
+
+.button:hover{
+    box-shadow: 0 10px 36px rgb(0,0,0,0.15);
+}
+
+.section{
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+}
+.section_title{
+    position: relative;
+    font-size: var(--h2-font-size);
+    color: var(--first-color);
+    margin-top: var(--mb-2);
+    margin-bottom: var(--mb-4);
+    text-align: center;
+}
+
+.section_title::after{
+    position: absolute;
+    content: '';
+    width: 64px;
+    height: 0.18rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 2rem;
+    background-color: var(--first-color);
+}
+
+/* About section */
+.about_container{
+    row-gap: 2rem;
+    text-align: center;
+}
+
+.about_subtitle{
+    margin-bottom: var(--mb-2);
+}
+
+.about_img{
+    margin: var(--mb-5);
+    padding: var(--mb-5);
+    border-radius: 50%;
+    border: 2px solid var(--first-color);
+    justify-content: center;
+}
+
+.about_text{
+   
+    font-size: 1.2rem;
+    text-align: justify;
+    margin-top: 20px;
+    
+}
+
+/* 
+Skills */
+
+.skills-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.skills-content .column {
+    width: calc(50% - 30px);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+}
+
+.skills-images{
+    width: 120px;
+    height: 120px;
+    margin: var(--mb-1);
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-around;
+}
