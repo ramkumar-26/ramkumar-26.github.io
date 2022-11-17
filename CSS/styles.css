@@ -442,3 +442,47 @@ audio, canvas, embed, iframe, img, object, svg, video {
     background-color: white;
     width: 100%;
 }
+
+/* Contact */
+
+.contact_input{
+    width: 100%;
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-semi);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1.5px solid var(--second-color);
+    outline: none;
+    margin-bottom: var(--mb-4);
+}
+
+.contact_button{
+    display: block;
+    outline:none;
+    border: none;
+    font-size: var(--normal-font-size);
+    cursor:pointer ;
+    margin-left: auto;
+}
+
+/* Footer */
+.footer{
+    background-color: var(--fourth-color);
+    color: #fff;
+    text-align: center;
+    font-weight: var(--font-semi);
+    padding: 2rem 0;
+}
+.footer_title{
+    font-size: 2rem;
+    margin-bottom: var(--mb-4);
+
+}
+.footer_socials{
+    margin-bottom: var(--mb-4);
+}
+.footer_social_icon{
+    font-size: 1.5rem;
+    color: #fff;
+    margin: 0 var(--mb-4);
+}
