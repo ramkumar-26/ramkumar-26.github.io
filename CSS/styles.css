@@ -179,6 +179,8 @@ img{
     animation-duration: 2s; /* don't forget to set a duration! */
   }
 
+
+
 /* Active Menu */
 
 .active::after{
@@ -357,9 +359,34 @@ Skills */
 }
 
 /* Project */
+
+.project_links{
+   
+    margin: var(--mb-2);
+    height: 40px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.project_links a{
+    color: var(--white);
+    width: 40%;
+    background-color: #4070f4;
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.project_links a:hover{
+    color: #4070f4;
+    background-color: white;
+    width: 100%;
+}
+
 .project_container{
     padding: var(--mb-2);
-   
+
 }
 
 .project_card{
@@ -436,29 +463,7 @@ audio, canvas, embed, iframe, img, object, svg, video {
     vertical-align: middle;
 }
 
-.project_links{
-   
-    margin: var(--mb-2);
-    height: 40px;
-    font-size: 1rem;
-    font-weight: bold;
-}
 
-.project_links a{
-    color: var(--white);
-    width: 40%;
-    background-color: #4070f4;
-    text-align: center;
-    margin: auto;
-    padding: 10px;
-    border-radius: 20px;
-}
-
-.project_links a:hover{
-    color: #4070f4;
-    background-color: white;
-    width: 100%;
-}
 
 /* Github stats */
 .github-stats-list{
@@ -640,12 +645,15 @@ audio, canvas, embed, iframe, img, object, svg, video {
         margin-bottom: 0;
         
     }
+    
 
     .project_container{
-        grid-template-columns: repeat(2,1fr);
-        column-gap: 10%;
-        padding: 0 6% 0 6%;
-       
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: repeat(3, 1fr);
+        padding-block: 2rem;
+        width: min(95%,70rem);
+        margin-inline: auto;
     }
 
     .project_container .project_card {
@@ -656,13 +664,30 @@ audio, canvas, embed, iframe, img, object, svg, video {
     }
     .project_card:hover{
         border-radius: 20px;
-        box-shadow: rgb(85, 91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px, rgb(255, 217, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px, rgb(255, 85, 85) 0px 0px 0px 15px;    }
+        box-shadow: rgb(85, 91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px, rgb(255, 217, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px, rgb(255, 85, 85) 0px 0px 0px 15px; 
+       }
 
+    .project_card:hover  .project_links {
+                animation: bounceIn;
+                animation-duration:3s ;
+    }
     .contact_form{
         width: 400px;
     }
     .contact_container{
         justify-items:center;
+    }
+
+    #more-projects{
+        background-color: #fff;
+        display: table;
+    }
+    #more-projects p{
+    text-align:center; 
+    vertical-align: middle;
+    display: table-cell; 
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;  
     }
     
 
