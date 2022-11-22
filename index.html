@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,6 +12,14 @@
   <link rel="stylesheet"
   href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link
+ rel="stylesheet"
+ href="./CSS/calender.css"/>
+ <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
 
 </head>
 <body>
@@ -18,8 +27,9 @@
     <header class="header">
         <nav class="nav bd_grid">
             <div>
+                
                 <a href="#" class="nav_logo">
-                    Rkumar
+                    &#127361&#127344;&#127356<span id="smiley">&#128513;</span>
                 </a>
             </div>
             <div class="nav_menu" id="nav_menu">
@@ -31,13 +41,16 @@
                         <a href="#about" class="nav_link active">About</a>
                     </li> 
                     <li class="nav_items">
-                        <a href="#home" class="nav_link active">Skills</a>
+                        <a href="#skills" class="nav_link active">Skills</a>
                     </li>
                     <li class="nav_items">
-                        <a href="#home" class="nav_link active">Work</a>
-                    </li >    
+                        <a href="#projects" class="nav_link active">Work</a>
+                    </li >   
                     <li class="nav_items">
-                        <a href="#home" class="nav_link active">Contact</a>
+                        <a href="#github" class="nav_link active">Stats</a>
+                    </li > 
+                    <li class="nav_items">
+                        <a href="#contact" class="nav_link active">Contact</a>
                     </li>    
                 </ul>
             </div>
@@ -57,7 +70,7 @@
                             Ramkumar
                     </span><br /> Java Developer
                 </h1>
-                <a href="#" class="button"> Resume </a>
+                <a href="https://drive.google.com/file/d/1s1_5Y3r1VXOaGAw83fYjHfq0h2g8M3yX/view?usp=sharing" target="_blank" class="button"> Resume </a>
             </div>
             <div class="home_social" >
                 <a href="#" class="home_social_icon" data-aos="fade-down">
@@ -91,11 +104,11 @@
                         I'm Ramkumar 
                     </h2>
                     <p class="about_text"
-                    data-aos="fade-down" data-aos-delay="450">
+                    data-aos="fade-down">
                         I'm an enthusiastic Java Developer with a passion for developing scalable applications that will interact with the front-end of the application. I started my carrer as a software Tester but my aspiration towards Development made me learn Java Software Development.
                     </p>
                     <p class="about_text"
-                    data-aos="fade-down" data-aos-delay="450">
+                    data-aos="fade-down">
                         Here I am, today with an exceptional skills in software development with an outstanding work ethic. A highly self-motivated person with effective problem handling skills. Looking forward to work in an amazing organization.
                     </p>
                 </div>
@@ -114,44 +127,44 @@
                     <div class="column">
     
                         <div class="skills-images"
-                        data-aos="fade-left" data-aos-delay="50">
+                        data-aos="fade-down" data-aos-delay="50">
 
                             <img src="./Images/skills/html_round.webp"  alt="">
                         </div>
     
                         <div class="skills-images"
-                        data-aos="fade-right" data-aos-delay="50">
+                        data-aos="fade-down" data-aos-delay="50">
                             <img src="./Images/skills/css_round.webp" alt="">
                         </div>
     
                         <div class="skills-images"
-                        data-aos="fade-left" data-aos-delay="50">
+                        data-aos="fade-down" data-aos-delay="50">
                             <img src="./Images/skills/Js_round.png" alt="">
                         </div>
     
                         <div class="skills-images reduce"
-                        data-aos="fade-right" data-aos-delay="50">
+                        data-aos="fade-down" data-aos-delay="50">
                             <img src="./Images/skills/java_round.png" alt="">
                         </div>
 
                         <div class="skills-images"
-                        data-aos="fade-left" data-aos-delay="50">
+                        data-aos="fade-down" data-aos-delay="50">
                             <img src="./Images/skills/spring_round.png" alt="">
                         </div>
     
     
                         <div class="skills-images"
-                        data-aos="fade-right" data-aos-delay="50">
+                        data-aos="fade-down" data-aos-delay="50">
                             <img src="./Images/skills/hybernate_round.png" alt="">
                         </div>
                         
                         <div class="skills-images"
-                        data-aos="fade-left" data-aos-delay="50">
+                        data-aos="fade-down" data-aos-delay="50">
                             <img src="./Images/skills/aws_round.png" alt="">
                         </div>
     
                         <div class="skills-images"
-                        data-aos="fade-right" data-aos-delay="50">
+                        data-aos="fade-down" data-aos-delay="50">
                             <img src="./Images/skills/sql_round.png" alt="">
                         </div>
                     </div>
@@ -159,11 +172,12 @@
             </div>
         </section>
         <!--Work section-->
-        <section class="project section">
-            <h2 class="section_title">Projects</h2>
-            <div class="project_container bd_grid">
+        <section class="project section " id="projects">
+            <h2 class="section_title" data-aos="fade-down">Projects</h2>
+            <div class="project_container bd_grid" 
+            data-aos="fade-down" data-aos-delay="250">
             <!-- project 1 -->
-              <div class="project_card">
+              <div class="project_card" data-aos="fade-down" data-aos-delay="100">
                 <div class="project_img">
                     <img src="./Images/project1.png" alt="">
                 </div>
@@ -189,7 +203,7 @@
                 </div>
               </div>
             <!--project 2 -->
-            <div class="project_card">
+            <div class="project_card" data-aos="fade-down" data-aos-delay="150">
                 <div class="project_img">
                     <img src="./Images/project1.png" alt="">
                 </div>
@@ -216,7 +230,7 @@
             </div>
 
             <!-- project 3 -->
-            <div class="project_card">
+            <div class="project_card" data-aos="fade-down" data-aos-delay="100">
                 <div class="project_img">
                     <img src="./Images/project1.png" alt="">
                 </div>
@@ -243,7 +257,7 @@
             </div>
 
             <!-- project 4 -->
-            <div class="project_card">
+            <div class="project_card" data-aos="fade-down" data-aos-delay="150">
                 <div class="project_img">
                     <img src="./Images/project1.png" alt="">
                 </div>
@@ -272,15 +286,49 @@
             </div>
         </section>
 
+        <!-- Github stats -->
+        <section class="github section" id="github">
+            <div id="github_stats">
+                <div class="stats_container">
+                    <h1 class="section_title" data-aos="fade-down">Github Stats</h1>
+                    <div class="github-stats-list">
+                        <div class="github-stat">
+                            <img data-aos="fade-down"  data-aos-delay="100" src="https://github-readme-stats.vercel.app/api/top-langs?username=ramkumar-26&amp;show_icons=true&amp;theme=dark&amp;title_color=fb8d0e&amp;text_color=fcfcfc&amp;locale=en&amp;layout=compact" alt="ramkumar-26" height="275px" width="30%">
+                        </div>
+                        <div class="github-stat">
+                            <img  data-aos="fade-down"  data-aos-delay="100" src="https://github-readme-streak-stats.herokuapp.com/?user=ramkumar-26&amp;theme=highcontrast" alt="Github Contributions">
+                        </div>
+                        <div class="github-stat">
+                            <img  data-aos="fade-down"  data-aos-delay="100" src="https://github-readme-stats.vercel.app/api?username=ramkumar-26&amp;theme=highcontrast&amp;show_icons=true&amp;count_private=true" alt="Github Stats">
+                        </div>
+                        <div class="github-stat" id="most-lang">
+                            <img  data-aos="fade-down"  data-aos-delay="100" src="https://activity-graph.herokuapp.com/graph?username=ramkumar-26&amp;theme=xcode" alt="Github Graph">
+                        </div>
+                    </div>
+                </div>
+               
+             
+             
+            </div>
+            <!-- Prepare a container for your calendar. -->
+            <div class="calendar">
+    <!-- Loading stuff -->
+    Loading the data just for you.
+            </div>
+        </section>
+
+        
         <!--Contact section-->
         <section class="contact section" id="contact">
-            <h2 class="section_title">Contact</h2>
+            <h2 class="section_title" data-aos="fade-down">Contact</h2>
 
             <dic class="contact_container bd_grid">
                 <form action="#" class="contact_form">
-                    <input type="text" placeholder="Name" class="contact_input">
-                    <input type="mail" placeholder="Email" class="contact_input">
-                    <textarea name="" id="" cols="0" rows="10" class="contact_input">
+                    <input type="text" placeholder="Name" class="contact_input" data-aos="fade-right" data-aos-delay="200">
+                    <input type="mail" placeholder="Email" class="contact_input"
+                    data-aos="fade-right" data-aos-delay="200">
+                    <textarea name="" id="" cols="0" rows="10" class="contact_input"
+                    data-aos="fade-right" data-aos-delay="200">
                     </textarea>
                     <input type="button" value="send" class="contact_button button">
                 </form>
@@ -315,5 +363,15 @@
             once: false
         });
       </script>
+
+<script
+src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js">
+</script>
+<script>
+  GitHubCalendar(".calendar", "ramkumar-26");
+  // or enable responsive functionality
+  GitHubCalendar(".calendar", "ramkumar-26", { responsive: true });
+</script>
+         
 </body>
 </html>

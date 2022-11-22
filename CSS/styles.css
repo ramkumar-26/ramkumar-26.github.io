@@ -1,6 +1,6 @@
 /* Google Font - Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Signika+Negative:wght@700&display=swap');
-
+@import 'animate.css';
 /* variables */
 :root{
     --header-height : 3em;
@@ -15,6 +15,14 @@
     --white: #fff;
     --black: black;
     --gradient-color : linear-gradient(to right,#3C1053FF,#DF6589FF);
+}
+/* github calender color */
+:root {
+    --color-calendar-graph-day-bg: #dddbdb;
+    --color-calendar-graph-day-L1-bg: #39dd34;
+    --color-calendar-graph-day-L2-bg: #45a045;
+    --color-calendar-graph-day-L3-bg: #047526;
+    --color-calendar-graph-day-L4-bg: #0a4208;
 }
 /* font size */
 :root{
@@ -161,6 +169,15 @@ img{
     font-size: 1.5rem;
     cursor: pointer;
 }
+
+.nav_logo {
+    padding: 4px;
+    border-radius: 4px;
+    display: inline-block;
+    margin: 0 0.5rem;
+    animation: slideOutRight;
+    animation-duration: 2s; /* don't forget to set a duration! */
+  }
 
 /* Active Menu */
 
@@ -415,7 +432,7 @@ Skills */
     animation: bounce 1s infinite;
 }
 audio, canvas, embed, iframe, img, object, svg, video {
-    display: block;
+    display: inline;
     vertical-align: middle;
 }
 
@@ -442,6 +459,23 @@ audio, canvas, embed, iframe, img, object, svg, video {
     background-color: white;
     width: 100%;
 }
+
+/* Github stats */
+.github-stats-list{
+    width: 90%;
+    margin: auto; 
+}
+.github-stat {
+   padding-bottom: 30px;
+   border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.github-stat img{
+    width: 100%;
+    padding: 10px;
+}
+
 
 /* Contact */
 
@@ -486,3 +520,181 @@ audio, canvas, embed, iframe, img, object, svg, video {
     color: #fff;
     margin: 0 var(--mb-4);
 }
+
+@media screen and (min-width:412px){
+    .about_img{
+       width: 50%;
+       margin: auto;
+    }
+    .about_card{
+        width: 90%;
+        margin: auto;
+    }
+
+    .project_tech-stack div{
+        
+        border-radius: 10px;
+        color:#4070f4;
+        background-color: #0e2431;
+        margin-top: 0;
+        margin-bottom: 0;
+        
+    }
+
+
+}
+
+@media screen and (min-width:768px){
+    body{
+        margin: 0;
+    }
+    .section{
+        padding-top: 4rem;
+        padding-bottom: 3rem;
+    }
+    .section-title{
+        margin-bottom: var(--mb-4);
+    }
+    .section-title::after{
+        width:80px;
+        top: 3rem;
+    }
+    .nav{
+            height: calc(var(--header-height) + 1rem);
+            padding:20px 0 20px 0;
+           
+    }
+    .nav_items{
+        margin-left: var(--mb-6);
+        margin-bottom: 0;
+    }
+    .nav_list{
+        display: flex;
+        padding-top: 0;
+    }
+    .nav_toggle{
+        display: none;
+    }
+    .nav_link{
+        color: var(--second-color);
+    }
+    .home{
+        height:100vh;
+    }
+    .home_data{
+        align-self: flex-end;
+    }
+    .home_social{
+        padding-top: 0;
+        padding-bottom: 2.5rem;
+        flex-direction: row;
+        align-self: flex-end;
+    }
+    .home_social_icon{
+        margin-bottom: 0;
+        margin-right: var(--mb-4);
+    }
+    .home_img{
+        width: 460px;
+        bottom: 3%;
+    }
+    .home_img svg{
+        width: 100%;
+    }
+    .about_container{
+       
+        grid-template-columns: repeat(2,1fr);
+        align-items: center;
+        text-align: initial;
+        padding-right: 2%;
+    }
+
+    .about_img{
+        box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;        width:70%;
+    }
+    .about_card{
+        width: 100%;
+        margin: auto;
+    }
+   
+    .skills-content .column {
+        width: calc(50% - 30px);
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        width: 100%;
+        row-gap: 20%;
+    }
+    .skills-content{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        
+    }
+
+    .project_tech-stack {
+        
+        border-radius: 10px;
+        color:black;
+        margin-top: 0;
+        margin-bottom: 0;
+        
+    }
+
+    .project_container{
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 10%;
+        padding: 0 6% 0 6%;
+       
+    }
+
+    .project_container .project_card {
+       border-radius: 0;
+       position: relative;
+       overflow: hidden;
+       cursor: pointer;
+    }
+    .project_card:hover{
+        border-radius: 20px;
+        box-shadow: rgb(85, 91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px, rgb(255, 217, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px, rgb(255, 85, 85) 0px 0px 0px 15px;    }
+
+    .contact_form{
+        width: 400px;
+    }
+    .contact_container{
+        justify-items:center;
+    }
+    
+
+}
+
+@media screen and (min-width:1024px){
+    .bd_grid{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .home_img{
+        right: 10%;
+    }
+
+
+    /* Github stats */
+    .github-stats-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+        margin-top: 50px;
+        grid-gap: 40px;
+    }
+    .github-stat {
+        border-radius: 10px;
+        position: relative;
+        overflow: hidden;
+    }
+     .github-stat {
+         padding-bottom: 30px;
+     }
+     .github-stat img{
+         width: 100%;
+     }
+}
+
