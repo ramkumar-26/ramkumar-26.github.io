@@ -286,8 +286,9 @@ img{
 /* About section */
 .about_card{
     /* border: 1px solid var(--second-color); */
-    background-color: var(--third-color);
-    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: rgb(240 46 170 / 40%);
+    color: var(--second-color);
     padding: var(--mb-3);
     border-radius: 20px;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;;
@@ -427,6 +428,18 @@ Skills */
     margin-bottom: 0;
     padding: 2px; 
 }
+
+#more-projects{
+    background-color: #fff;
+    display: table;
+}
+#more-projects p{
+text-align:center; 
+vertical-align: middle;
+display: table-cell; 
+font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-size: large;  
+}
 .flex {
     display: flex;
 }
@@ -515,7 +528,8 @@ audio, canvas, embed, iframe, img, object, svg, video {
 .footer_title{
     font-size: 2rem;
     margin-bottom: var(--mb-4);
-
+    text-align: center;
+    
 }
 .footer_socials{
     margin-bottom: var(--mb-4);
@@ -545,8 +559,36 @@ audio, canvas, embed, iframe, img, object, svg, video {
         margin-bottom: 0;
         
     }
+   
 
 
+}
+
+@media screen and (min-width:680px){
+    .project_container{
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: repeat(2, 1fr);
+        padding-block: 2rem;
+        width: min(95%,70rem);
+        margin-inline: auto;
+    }
+
+    .project_container .project_card {
+       border-radius: 0;
+       position: relative;
+       overflow: hidden;
+       cursor: pointer;
+    }
+    .project_card:hover{
+        border-radius: 20px;
+        box-shadow: rgb(85, 91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px, rgb(255, 217, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px, rgb(255, 85, 85) 0px 0px 0px 15px; 
+       }
+
+    .project_card:hover  .project_links {
+                animation: bounceIn;
+                animation-duration:3s ;
+    }
 }
 
 @media screen and (min-width:768px){
@@ -646,31 +688,6 @@ audio, canvas, embed, iframe, img, object, svg, video {
         
     }
     
-
-    .project_container{
-        display: grid;
-        gap: 1.5rem;
-        grid-template-columns: repeat(3, 1fr);
-        padding-block: 2rem;
-        width: min(95%,70rem);
-        margin-inline: auto;
-    }
-
-    .project_container .project_card {
-       border-radius: 0;
-       position: relative;
-       overflow: hidden;
-       cursor: pointer;
-    }
-    .project_card:hover{
-        border-radius: 20px;
-        box-shadow: rgb(85, 91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px, rgb(255, 217, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px, rgb(255, 85, 85) 0px 0px 0px 15px; 
-       }
-
-    .project_card:hover  .project_links {
-                animation: bounceIn;
-                animation-duration:3s ;
-    }
     .contact_form{
         width: 400px;
     }
@@ -692,7 +709,16 @@ audio, canvas, embed, iframe, img, object, svg, video {
     
 
 }
-
+@media screen and (min-width:1020px){
+    .project_container{
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: repeat(3, 1fr);
+        padding-block: 2rem;
+        width: min(95%,70rem);
+        margin-inline: auto;
+    }
+}
 @media screen and (min-width:1024px){
     .bd_grid{
         margin-left: auto;

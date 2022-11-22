@@ -26,3 +26,11 @@ function linkAction(){
     let navMenu = document.getElementById('nav_menu');
     navMenu.classList.remove('show');
 }
+
+//dailog box
+function send() {
+    document.getElementById("input-1").value = "";
+    document.getElementById("input-2").value = "";
+    document.getElementById("input-3").value = "";
+    alert ("Thankyou for Contacting! Message sent Successfully!");
+ }

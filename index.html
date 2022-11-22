@@ -38,7 +38,7 @@
                         <a href="#skills" class="nav_link active">Skills</a>
                     </li>
                     <li class="nav_items">
-                        <a href="#projects" class="nav_link active">Work</a>
+                        <a href="#projects" class="nav_link active">Projects</a>
                     </li>
                     <li class="nav_items">
                         <a href="#github" class="nav_link active">Stats</a>
@@ -68,14 +68,14 @@
                     target="_blank``" class="button"> Resume </a>
             </div>
             <div class="home_social">
-                <a href="#" class="home_social_icon" data-aos="fade-down">
+                <a href="https://www.linkedin.com/in/connect-with-ramkumar/" target="_blank"  class="home_social_icon" data-aos="fade-down" data-aos-delay="150">
                     <i class='bx bxl-linkedin'></i>
                 </a>
-                <a href="#" class="home_social_icon" data-aos="fade-down" data-aos-delay="200">
+                <a href="https://github.com/ramkumar-26" class="home_social_icon" target="_blank" data-aos="fade-down" data-aos-delay="200">
                     <i class='bx bxl-github'></i>
                 </a>
-                <a href="#" class="home_social_icon" data-aos="fade-down" data-aos-delay="250">
-                    <i class='bx bxl-instagram'></i>
+                <a href="mailto:ramkumar.ds26@gmail.com" class="home_social_icon" data-aos="fade-down" data-aos-delay="250">
+                    <i class='bx bx-envelope'></i>
                 </a>
             </div>
 
@@ -190,12 +190,12 @@
                     </h2>
                     <p class="about_text" data-aos="fade-down">
                         I'm an enthusiastic Java Developer with a passion for developing scalable applications that will
-                        interact with the front-end of the application. I started my carrer as a software Tester but my
-                        aspiration towards Development made me learn Java Software Development.
+                        interact with the front-end of the application. I started my carrer as a Software Tester but my
+                        aspiration towards Development made me to learn Java Software Development.
                     </p>
                     <p class="about_text" data-aos="fade-down">
-                        Here I am, today with an exceptional skills in software development with an outstanding work
-                        ethic. A highly self-motivated person with effective problem handling skills. Looking forward to
+                        Here I am today, with an exceptional skills in building backend applications using Java, SQL, Spring, Hibernate. 
+                        A highly self-motivated person with effective problem handling skills. Looking forward to
                         work in an amazing organization.
                     </p>
                 </div>
@@ -274,12 +274,12 @@
                         </div>
                     </div>
                     <div class="project_links flex">
-                        <a href="https://github.com/LV-23/envious-cactus-6437" target="_blank">
+                        <a href="" target="_blank">
                             <div>
                                 <p>GitHub</p>
                             </div>
                         </a>
-                        <a href="https://envious-cactus-6437.netlify.app/" target="_blank">
+                        <a href="" target="_blank">
                             Demo
                         </a>
                     </div>
@@ -340,7 +340,7 @@
                                 <p>GitHub</p>
                             </div>
                         </a>
-                        <a href="https://github.com/LV-23/envious-cactus-6437/tree/main/media" target="_blank">
+                        <a href="https://envious-cactus-6437.netlify.app/" target="_blank">
                             Demo
                         </a>
                     </div>
@@ -349,13 +349,13 @@
                 <!-- project 4 -->
                 <div class="project_card .grid-col-span-2">
                     <div class="project_img">
-                        <img src="./Images/project1.png" alt="">
+                        <img src="./Images/project4.png" alt="">
                     </div>
                     <div class="project_detail">
-                        <p class="project_title">GYMWOLF</p>
-                        <p class="project_desc">This was a group project. We have created this website with the help of
-                            HTML, CSS, Javascript. I worked on 2 webpages of this website which is Online Personal
-                            Trainer page and Take a tour page.</p>
+                        <p class="project_title">TaskManager</p>
+                        <p class="project_desc">TaskManager is a web application used for managing day to day tasks.
+                            Users can able to create a task, view it, move it to progress and finally able to move the task to done. Created using local storage.
+                        </p>
                     </div>
                     <div class="project_tech-stack">
                         <div class="flex justify-center">
@@ -366,12 +366,12 @@
                         </div>
                     </div>
                     <div class="project_links flex">
-                        <a href="https://github.com/LV-23/envious-cactus-6437" target="_blank">
+                        <a href="#" target="_blank">
                             <div>
                                 <p>GitHub</p>
                             </div>
                         </a>
-                        <a href="https://github.com/LV-23/envious-cactus-6437/tree/main/media" target="_blank">
+                        <a href="https://stalwart-choux-97bc1a.netlify.app/index.html" target="_blank">
                             Demo
                         </a>
                     </div>
@@ -429,14 +429,14 @@
 
             <dic class="contact_container bd_grid">
                 <form action="#" class="contact_form">
-                    <input type="text" placeholder="Name" class="contact_input" data-aos="fade-right"
+                    <input type="text" placeholder="Name" id="input-1" class="contact_input" data-aos="fade-right"
                         data-aos-delay="200">
-                    <input type="mail" placeholder="Email" class="contact_input" data-aos="fade-right"
+                    <input type="mail" placeholder="Email" id="input-2" class="contact_input" data-aos="fade-right"
                         data-aos-delay="200">
-                    <textarea name="" id="" cols="0" rows="10" class="contact_input" data-aos="fade-right"
+                    <textarea name=""  cols="0" rows="10" id="input-3" class="contact_input" data-aos="fade-right"
                         data-aos-delay="200">
                     </textarea>
-                    <input type="button" value="send" class="contact_button button">
+                    <input type="button" value="send" class="contact_button button" onclick="send()">
                 </form>
             </dic>
 
@@ -444,19 +444,26 @@
 
         <!-- Footer Section -->
         <footer class="footer">
-            <p class="footer_title">Ramkumar</p>
+            <p class="footer_title">Ramkumar Dhayalan &#128150; </p>
             <div class="footer_socials">
-                <a href="#" class="footer_social_icon">
+                
+                <a href="https://www.linkedin.com/in/connect-with-ramkumar/" target="_blank" class="footer_social_icon">
                     <i class='bx bxl-linkedin'></i>
                 </a>
-                <a href="#" class="footer_social_icon">
+                <a href="https://github.com/ramkumar-26" target="_blank" class="footer_social_icon">
                     <i class='bx bxl-github'></i>
                 </a>
-                <a href="#" class="footer_social_icon">
-                    <i class='bx bxl-instagram'></i>
+                <a href="mailto:ramkumar.ds26@gmail.com" target="_blank" class="footer_social_icon">
+                    <i class='bx bx-envelope'></i>
                 </a>
+                <a href="https://drive.google.com/file/d/1s1_5Y3r1VXOaGAw83fYjHfq0h2g8M3yX/view?usp=sharing" download target="_blank" class="footer_social_icon">
+                    <i class='bx bx-download'></i>
+                </a>
+
+                
+                
             </div>
-            <p>&#169;2022 copyright all right reserved</p>
+            <p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">#GrowTogether</p>
         </footer>
     </main>
 
@@ -473,8 +480,6 @@
     <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js">
     </script>
     <script>
-        GitHubCalendar(".calendar", "ramkumar-26");
-        // or enable responsive functionality
         GitHubCalendar(".calendar", "ramkumar-26", { responsive: true });
     </script>
 
