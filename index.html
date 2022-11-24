@@ -429,14 +429,15 @@
 
             <dic class="contact_container bd_grid">
                 <form action="#" class="contact_form">
-                    <input type="text" placeholder="Name" id="input-1" class="contact_input" data-aos="fade-right"
+                    <input type="text" placeholder="Name" required id="input-1" class="contact_input" data-aos="fade-right"
+                        data-aos-delay="200" >
+                    <input type="mail" placeholder="Email" required id="input-2" class="contact_input" data-aos="fade-right"
                         data-aos-delay="200">
-                    <input type="mail" placeholder="Email" id="input-2" class="contact_input" data-aos="fade-right"
-                        data-aos-delay="200">
-                    <textarea name=""  cols="0" rows="10" id="input-3" class="contact_input" data-aos="fade-right"
+                    <textarea name=""  cols="0" rows="10" required id="input-3" class="contact_input" data-aos="fade-right"
                         data-aos-delay="200">
                     </textarea>
-                    <input type="button" value="send" class="contact_button button" onclick="send()">
+    
+                    <input type="submit" value="send" class="contact_button button" onclick="send()">
                 </form>
             </dic>
 

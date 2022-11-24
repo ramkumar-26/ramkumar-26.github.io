@@ -29,8 +29,16 @@ function linkAction(){
 
 //dailog box
 function send() {
-    document.getElementById("input-1").value = "";
-    document.getElementById("input-2").value = "";
-    document.getElementById("input-3").value = "";
-    alert ("Thankyou for Contacting! Message sent Successfully!");
+    
+    let name = document.getElementById("input-1").value;
+    let email = document.getElementById("input-2").value;
+    let msg = document.getElementById("input-3").value;
+    if(name=="" || email=="" || msg==""){
+        alertt ("Please Enter All The Fields!");
+    }else{
+        document.getElementById("input-1").value="";
+        document.getElementById("input-2").value="";
+        document.getElementById("input-3").value="";
+        alert ("Thank You for Contacting! Message sent Successfully!");
+    }
  }
