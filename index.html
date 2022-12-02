@@ -460,11 +460,21 @@
                 <a href="https://drive.google.com/file/d/1s1_5Y3r1VXOaGAw83fYjHfq0h2g8M3yX/view?usp=sharing" download target="_blank" class="footer_social_icon">
                     <i class='bx bx-download'></i>
                 </a>
-
-                
+                <div class="count">
+                    <p class="visit_text">This page was viewed</p>
+                    <h1 id="visits">0</h1>
+                    <p class="visit_text">times</p>
+                </div>
+               
                 
             </div>
             <p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">#GrowTogether</p>
+            <script>
+                function cb(response) {
+                     document.getElementById('visits').innerText = response.value;
+                }
+            </script>
+            <script async src="https://api.countapi.xyz/hit/ramkumar-26/visits?callback=cb"></script>
         </footer>
     </main>
 
@@ -483,6 +493,7 @@
     <script>
         GitHubCalendar(".calendar", "ramkumar-26", { responsive: true });
     </script>
+   
 
 </body>
 

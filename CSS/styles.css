@@ -1,6 +1,7 @@
 /* Google Font - Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Signika+Negative:wght@700&display=swap');
 @import 'animate.css';
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 /* variables */
 :root{
     --header-height : 3em;
@@ -564,6 +565,22 @@ audio, canvas, embed, iframe, img, object, svg, video {
 
 }
 
+.count{
+    padding-top: 20px;
+}
+#visits{
+    font-family: 'Muli', sans-serif;
+    font-size: 20px;
+	margin: 0;
+    color: #fff;
+}
+.visit_text{
+    font-family: 'Muli', sans-serif;
+    color: rgba(255, 255, 255, 0.8);
+	letter-spacing: 2px;
+	margin: 0;
+}
+
 @media screen and (min-width:680px){
     .project_container{
         display: grid;
@@ -590,6 +607,8 @@ audio, canvas, embed, iframe, img, object, svg, video {
                 animation-duration:3s ;
     }
 }
+
+
 
 @media screen and (min-width:768px){
     body{
