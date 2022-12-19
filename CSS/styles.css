@@ -334,6 +334,14 @@ Skills */
     justify-content: space-between;
 }
 
+.skill-name{
+    margin: auto;
+    margin-top: 8px;
+    text-align: center;
+  
+}
+
+
 .skills-content .column {
     width: calc(50% - 30px);
     display: grid;
@@ -351,6 +359,7 @@ Skills */
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     border-radius: 50%;
     margin-top: -20px;
+    
 }
 
 .skills-images img{
