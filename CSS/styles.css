@@ -323,6 +323,10 @@ img{
 /* 
 Skills */
 
+.skills{
+    margin-bottom: 30px;
+}
+
 .skills-content{
     display: flex;
     flex-wrap: wrap;
@@ -346,6 +350,7 @@ Skills */
     justify-content: space-around;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     border-radius: 50%;
+    margin-top: -20px;
 }
 
 .skills-images img{
