@@ -358,7 +358,7 @@ Skills */
     justify-content: space-around;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     border-radius: 50%;
-    margin-top: -20px;
+    margin-top: 30px;
     
 }
 
@@ -605,6 +605,10 @@ audio, canvas, embed, iframe, img, object, svg, video {
         padding-block: 2rem;
         width: min(95%,70rem);
         margin-inline: auto;
+    }
+
+    .skills-images{
+        margin-top: -20px;
     }
 
     .project_container .project_card {
