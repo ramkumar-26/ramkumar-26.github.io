@@ -169,6 +169,12 @@ img{
     font-weight: var(--font-semi);
 }
 
+.nav_actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
 @media screen and (max-width: 768px){
     .nav_menu{
         position: fixed;
@@ -219,7 +225,6 @@ img{
     color: var(--text-color);
     font-size: 1.5rem;
     cursor: pointer;
-    margin-left: 1rem;
     transition: color 0.3s ease;
 }
 
@@ -730,8 +735,8 @@ audio, canvas, embed, iframe, img, object, svg, video {
         display: none;
     }
     
-    .theme_toggle {
-        margin-left: auto;
+    .nav_actions {
+        gap: 1.5rem;
     }
     .nav_link{
         color: var(--second-color);

@@ -27,21 +27,77 @@ function linkAction(){
     navMenu.classList.remove('show');
 }
 
-//dailog box
-function send() {
-    
-    let name = document.getElementById("input-1").value;
-    let email = document.getElementById("input-2").value;
-    let msg = document.getElementById("input-3").value;
-    if(name=="" || email=="" || msg==""){
-        alert ("Please Enter All The Fields!");
-    }else{
-        document.getElementById("input-1").value="";
-        document.getElementById("input-2").value="";
-        document.getElementById("input-3").value="";
-        alert ("Thank You for Contacting! Message sent Successfully!");
-    }
- }
+// EmailJS Configuration
+// Initialize EmailJS with your Public Key
+(function() {
+    emailjs.init("1aQehdl_p9GiCwBVY"); // Replace with your EmailJS public key
+})();
+
+// Contact Form Handler
+const contactForm = document.getElementById('contact-form');
+const submitBtn = document.getElementById('submit-btn');
+const btnText = document.getElementById('btn-text');
+const btnLoader = document.getElementById('btn-loader');
+const formMessage = document.getElementById('form-message');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Show loading state
+        btnText.style.display = 'none';
+        btnLoader.style.display = 'inline';
+        submitBtn.disabled = true;
+        formMessage.textContent = '';
+        
+        // Get form data
+        const formData = {
+            from_name: document.getElementById('from_name').value,
+            from_email: document.getElementById('from_email').value,
+            message: document.getElementById('message').value
+        };
+        
+        // Send notification email to you
+        emailjs.send('service_kqzgx7j', 'template_contact', formData)
+            .then(function(response) {
+                console.log('Notification sent!', response.status);
+                
+                // Send auto-reply email to sender
+                return emailjs.send('service_kqzgx7j', 'template_autoreply', formData);
+            })
+            .then(function(response) {
+                console.log('Auto-reply sent!', response.status);
+                
+                // Success - both emails sent
+                formMessage.textContent = '✅ Message sent successfully! Check your email for confirmation.';
+                formMessage.style.color = '#4CAF50';
+                
+                // Reset form
+                contactForm.reset();
+                
+                // Reset button state
+                btnText.style.display = 'inline';
+                btnLoader.style.display = 'none';
+                submitBtn.disabled = false;
+                
+                // Clear success message after 5 seconds
+                setTimeout(() => {
+                    formMessage.textContent = '';
+                }, 5000);
+            })
+            .catch(function(error) {
+                // Error
+                console.log('FAILED...', error);
+                formMessage.textContent = '❌ Failed to send message. Please try again or email me directly at ramkumar.ds26@gmail.com';
+                formMessage.style.color = '#f44336';
+                
+                // Reset button state
+                btnText.style.display = 'inline';
+                btnLoader.style.display = 'none';
+                submitBtn.disabled = false;
+            });
+    });
+}
 
 // Theme Toggle Functionality
 const themeToggle = document.getElementById('theme_toggle');
