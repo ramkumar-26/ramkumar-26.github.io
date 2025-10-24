@@ -1201,6 +1201,12 @@ textarea.form-input {
     
     .hero-social {
         flex-wrap: wrap;
+        margin-bottom: 2rem;
+    }
+    
+    /* Hide scroll indicator on mobile to prevent overlap */
+    .scroll-indicator {
+        display: none;
     }
     
     .about-card {
