@@ -4,20 +4,27 @@
 // ===================================
 
 // Initialize AOS (Animate On Scroll)
+// Optimize for mobile performance
 AOS.init({
-    duration: 1000,
-    once: false,
-    offset: 100,
-    easing: 'ease-in-out'
+    duration: window.innerWidth <= 768 ? 600 : 1000, // Faster on mobile
+    once: true, // Animate only once to improve performance
+    offset: window.innerWidth <= 768 ? 50 : 100, // Smaller offset on mobile
+    easing: 'ease-in-out',
+    disable: false, // Can set to 'mobile' to completely disable on mobile
+    throttleDelay: 99 // Throttle scroll events
 });
 
 // ===================================
 // Particles.js Configuration
 // ===================================
+
+// Detect if mobile device
+const isMobile = window.innerWidth <= 768;
+
 particlesJS('particles-js', {
     particles: {
         number: {
-            value: 80,
+            value: isMobile ? 30 : 80, // Reduce particles on mobile
             density: {
                 enable: true,
                 value_area: 800
@@ -30,10 +37,10 @@ particlesJS('particles-js', {
             type: 'circle'
         },
         opacity: {
-            value: 0.5,
+            value: isMobile ? 0.3 : 0.5, // Lower opacity on mobile
             random: false,
             anim: {
-                enable: true,
+                enable: !isMobile, // Disable animation on mobile
                 speed: 1,
                 opacity_min: 0.1,
                 sync: false
@@ -43,14 +50,14 @@ particlesJS('particles-js', {
             value: 3,
             random: true,
             anim: {
-                enable: true,
+                enable: !isMobile, // Disable animation on mobile
                 speed: 2,
                 size_min: 0.1,
                 sync: false
             }
         },
         line_linked: {
-            enable: true,
+            enable: !isMobile, // Disable lines on mobile for better performance
             distance: 150,
             color: '#667eea',
             opacity: 0.4,
@@ -58,7 +65,7 @@ particlesJS('particles-js', {
         },
         move: {
             enable: true,
-            speed: 2,
+            speed: isMobile ? 1 : 2, // Slower on mobile
             direction: 'none',
             random: false,
             straight: false,
@@ -70,11 +77,11 @@ particlesJS('particles-js', {
         detect_on: 'canvas',
         events: {
             onhover: {
-                enable: true,
+                enable: !isMobile, // Disable hover on mobile
                 mode: 'repulse'
             },
             onclick: {
-                enable: true,
+                enable: !isMobile, // Disable click on mobile
                 mode: 'push'
             },
             resize: true
