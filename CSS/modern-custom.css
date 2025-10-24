@@ -20,12 +20,16 @@
 }
 
 body.light-theme {
-    --bg-primary: #FFFFFF;
-    --bg-secondary: #F8F9FA;
-    --glass-bg: rgba(255, 255, 255, 0.8);
-    --glass-border: rgba(0, 0, 0, 0.1);
-    --text-primary: #0A0E27;
-    --text-secondary: #4A5568;
+    --bg-primary: #F8FAFC;
+    --bg-secondary: #FFFFFF;
+    --glass-bg: rgba(255, 255, 255, 0.95);
+    --glass-border: rgba(102, 126, 234, 0.15);
+    --text-primary: #1E293B;
+    --text-secondary: #475569;
+    --text-muted: #64748B;
+    --accent-cyan: #0EA5E9;
+    --accent-pink: #EC4899;
+    --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
 }
 
 /* Base Styles */
