@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="./CSS/calender.css" />
+    <link rel="stylesheet" href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
 
@@ -38,10 +38,13 @@
                         <a href="#skills" class="nav_link active">Skills</a>
                     </li>
                     <li class="nav_items">
-                        <a href="#projects" class="nav_link active">Projects</a>
+                        <a href="#experience" class="nav_link active">Experience</a>
                     </li>
                     <li class="nav_items">
-                        <a href="https://drive.google.com/file/d/1s1_5Y3r1VXOaGAw83fYjHfq0h2g8M3yX/view" class="nav_link active">Resume</a>
+                        <a href="#github" class="nav_link active">GitHub</a>
+                    </li>
+                    <li class="nav_items">
+                        <a href="./Files/RAMKUMAR_D_BACKEND_ENGINEER.pdf" target="_blank" class="nav_link active">Resume</a>
                     </li>
                     <li class="nav_items">
                         <a href="#contact" class="nav_link active">Contact</a>
@@ -50,6 +53,10 @@
             </div>
             <div class="nav_toggle" id="nav_toggle">
                 <i class='bx bx-menu-alt-right'></i>
+            </div>
+            
+            <div class="theme_toggle" id="theme_toggle">
+                <i class='bx bx-moon' id="theme_icon"></i>
             </div>
 
         </nav>
@@ -62,13 +69,13 @@
                 <h1 class="home_title">
                     Hi, <br />I'm <span class="home_title_color">
                         Ramkumar
-                    </span><br /> Java Developer
+                    </span><br /> Backend Engineer
                 </h1>
-                <a href="https://drive.google.com/file/d/1s1_5Y3r1VXOaGAw83fYjHfq0h2g8M3yX/view?usp=sharing"
+                <a href="./Files/RAMKUMAR_D_BACKEND_ENGINEER.pdf"
                     target="_blank" class="button"> Resume </a>
             </div>
             <div class="home_social">
-                <a href="https://www.linkedin.com/in/connect-with-ramkumar/" target="_blank"  class="home_social_icon" data-aos="fade-down" data-aos-delay="150">
+                <a href="https://www.linkedin.com/in/connect-ramkumar/" target="_blank"  class="home_social_icon" data-aos="fade-down" data-aos-delay="150">
                     <i class='bx bxl-linkedin'></i>
                 </a>
                 <a href="https://github.com/ramkumar-26" class="home_social_icon" target="_blank" data-aos="fade-down" data-aos-delay="200">
@@ -190,10 +197,10 @@
                         I'm Ramkumar
                     </h2>
                     <p class="about_text" data-aos="fade-down">
-                        I'm an enthusiastic Java Developer with a passion for developing scalable applications that will interact with the front end of the application. I started my career as a software tester but my aspiration toward software development made me a Software Developer.
+                        Results-driven <strong>Backend Engineer</strong> with <strong>4+ years of experience</strong> in designing and developing scalable microservices and backend systems. Proven expertise in <strong>Java, Spring Boot, Node.js</strong>, and <strong>distributed architectures</strong>.
                     </p>
                     <p class="about_text" data-aos="fade-down">
-                        Here I am today, with exceptional skills in building backend applications using Java, SQL, Spring, and Hibernate. A highly self-motivated person with effective problem-handling skills. Looking forward to work in an amazing organization.
+                        Skilled in building event-driven systems, optimizing performance, and automating testing. Passionate about building high-availability systems and contributing to impactful backend solutions. Currently working as a <strong>Senior Software Engineer at Darby Telematics, Bangalore</strong>.
                     </p>
                 </div>
             </div>
@@ -232,18 +239,22 @@
 
                         <div class="skills-images" data-aos="fade-down" data-aos-delay="50">
                             <img src="./Images/skills/spring_round.png" alt="">
-                            <p class="skill-name">SpringBoot</p>
-                        </div>
-
-
-                        <div class="skills-images" data-aos="fade-down" data-aos-delay="50">
-                            <img src="./Images/skills/hibernate.png" alt="" >
-                            <p class="skill-name">Hibernate</p>
+                            <p class="skill-name">Spring Boot</p>
                         </div>
 
                         <div class="skills-images" data-aos="fade-down" data-aos-delay="50">
-                            <img src="./Images/skills/aws.png" alt="" >
-                            <p class="skill-name">AWS</p>
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="">
+                            <p class="skill-name">Node.js</p>
+                        </div>
+
+                        <div class="skills-images" data-aos="fade-down" data-aos-delay="50">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="" style="filter: invert(1);">
+                            <p class="skill-name">Express.js</p>
+                        </div>
+
+                        <div class="skills-images" data-aos="fade-down" data-aos-delay="50">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="">
+                            <p class="skill-name">MongoDB</p>
                         </div>
 
                         <div class="skills-images" data-aos="fade-down" data-aos-delay="50">
@@ -252,202 +263,176 @@
                         </div>
 
                         <div class="skills-images" data-aos="fade-down" data-aos-delay="50">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="">
+                            <p class="skill-name">PostgreSQL</p>
+                        </div>
+
+                        <div class="skills-images" data-aos="fade-down" data-aos-delay="50">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" alt="">
+                            <p class="skill-name">Redis</p>
+                        </div>
+
+                        <div class="skills-images" data-aos="fade-down" data-aos-delay="50">
+                            <img src="https://www.vectorlogo.zone/logos/rabbitmq/rabbitmq-icon.svg" alt="">
+                            <p class="skill-name">RabbitMQ</p>
+                        </div>
+
+                        <div class="skills-images" data-aos="fade-down" data-aos-delay="50">
+                            <img src="https://www.vectorlogo.zone/logos/apache_kafka/apache_kafka-icon.svg" alt="">
+                            <p class="skill-name">Apache Kafka</p>
+                        </div>
+
+                        <div class="skills-images" data-aos="fade-down" data-aos-delay="50">
+                            <img src="https://www.vectorlogo.zone/logos/elastic/elastic-icon.svg" alt="">
+                            <p class="skill-name">Elasticsearch</p>
+                        </div>
+
+                        <div class="skills-images" data-aos="fade-down" data-aos-delay="50">
+                            <img src="./Images/skills/aws.png" alt="">
+                            <p class="skill-name">AWS</p>
+                        </div>
+
+                        <div class="skills-images" data-aos="fade-down" data-aos-delay="50">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="">
+                            <p class="skill-name">Docker</p>
+                        </div>
+
+                        <div class="skills-images" data-aos="fade-down" data-aos-delay="50">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" alt="">
+                            <p class="skill-name">Kubernetes</p>
+                        </div>
+
+                        <div class="skills-images" data-aos="fade-down" data-aos-delay="50">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" alt="">
+                            <p class="skill-name">Jenkins</p>
+                        </div>
+
+                        <div class="skills-images" data-aos="fade-down" data-aos-delay="50">
+                            <img src="https://www.vectorlogo.zone/logos/prometheusio/prometheusio-icon.svg" alt="">
+                            <p class="skill-name">Prometheus</p>
+                        </div>
+
+                        <div class="skills-images" data-aos="fade-down" data-aos-delay="50">
+                            <img src="https://www.vectorlogo.zone/logos/elasticco_kibana/elasticco_kibana-icon.svg" alt="">
+                            <p class="skill-name">ELK Stack</p>
+                        </div>
+
+                        <div class="skills-images" data-aos="fade-down" data-aos-delay="50">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="">
+                            <p class="skill-name">Git</p>
+                        </div>
+
+                        <div class="skills-images" data-aos="fade-down" data-aos-delay="50">
                             <img src="./Images/skills/postman_round.jpg" alt="">
                             <p class="skill-name">Postman</p>
-                        </div>
-
-                        <div class="skills-images" data-aos="fade-down" data-aos-delay="50">
-                            <img src="./Images/skills/sts_round.jpeg" alt="">
-                            <p class="skill-name">STS</p>
-                        </div>
-
-                        <div class="skills-images" data-aos="fade-down" data-aos-delay="50">
-                            <img src="./Images/skills/IntelliJ_round.png" alt="">
-                            <p class="skill-name">IntelliJ</p>
-                        </div>
-
-                        <div class="skills-images" data-aos="fade-down" data-aos-delay="50">
-                            
-                                <img src="./Images/skills/Swagger_round.png" alt="">
-                           
-                            
-                            <p class="skill-name">Swagger</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!--Work section-->
-        <section class="project section " id="projects">
-            <h2 class="section_title" data-aos="fade-down">Projects</h2>
-            <div class="project_container bd_grid">
-                <!-- project 1 -->
-                <div class="project_card grid-col-span-2">
-                    <div class="project_img">
-                        <img src="./Images/project1.png" alt="">
+
+        <!--Experience section-->
+        <section class="experience section" id="experience">
+            <h2 class="section_title" data-aos="fade-down">Work Experience</h2>
+            <div class="experience_container bd_grid">
+                
+                <!-- Experience 1 - Darby Telematics -->
+                <div class="experience_card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="experience_header">
+                        <h3 class="experience_title">Senior Software Engineer</h3>
+                        <p class="experience_company">Darby Telematics, Bangalore</p>
+                        <p class="experience_date">Apr 2023 – Present</p>
                     </div>
-                    <div class="project_detail">
-                        <p class="project_title">CrimeTime</p>
-                        <p class="project_desc">CrimeTime is a console based java project  which is used to manage
-                            crime and criminal information. Features Included: Login, logout, register and manage crime as well as criminal,
-                            generate report. 
-                        </p>
-                    </div>
-                    <div class="project_tech-stack">
-                        <div class="flex justify-center">
-                            <p class="font-600 text-[.8rem]">Tech Stack :</p>
-                            <p class="font-500 text-[.8rem] ">JAVA , </p>
-                            <p class="font-500 text-[.8rem] ">SQL , </p>
-                            <p class="font-500 text-[.8rem] ">JDBC </p>
-                        </div>
-                    </div>
-                    <div class="project_links flex">
-                        <a href="https://github.com/ramkumar-26/determined-squirrel-6475" target="_blank">
-                            <div>
-                                <p>GitHub</p>
-                            </div>
-                        </a>
-                        <a href="https://drive.google.com/file/d/1BCmDCNCvvSE_ZTvn2CJjgHg55vNFIALZ/view?usp=share_link" target="_blank">
-                            Demo
-                        </a>
-                    </div>
-                </div>
-                <!--project 2 -->
-                <div class="project_card">
-                    <div class="project_img">
-                        <img src="./Images/project2.png" alt="">
-                    </div>
-                    <div class="project_detail">
-                        <p class="project_title">OneStoreJar</p>
-                        <p class="project_desc">OneStoreJar is a online shopping application where customers can login and buy products.
-                            It is group project of 5 members in which I have contributed to Order API services and Address services.
-                        </p>
-                    </div>
-                    <div class="project_tech-stack">
-                        <div class="flex justify-center">
-                            <p class="font-600 text-[.8rem]">Tech Stack :</p>
-                            <p class="font-500 text-[.8rem] ">Java , </p>
-                            <p class="font-500 text-[.8rem] ">API , </p>
-                            <p class="font-500 text-[.8rem] ">Springboot </p>
-                        </div>
-                    </div>
-                    <div class="project_links flex">
-                        <a href="https://github.com/GaneshGanta/charming-current-7669" target="_blank">
-                            <div>
-                                <p>GitHub</p>
-                            </div>
-                        </a>
-                        <a href="https://drive.google.com/file/d/1ZhFPyyru2Iynmsw-PCy_99UNw6zd112P/view?usp=sharing" target="_blank">
-                            Demo
-                        </a>
+                    <div class="experience_content">
+                        <ul class="experience_list">
+                            <li>Led development of scalable microservices for a vehicle telematics platform serving enterprise clients, handling high-volume real-time data processing</li>
+                            <li>Architected and implemented event-driven systems using <strong>RabbitMQ</strong> and <strong>Apache Kafka</strong>, ensuring reliable message processing with 99.9% uptime</li>
+                            <li>Designed RESTful APIs and pipelines using <strong>Spring Boot</strong>, <strong>MongoDB</strong>, and <strong>Redis caching</strong> layers to improve system performance</li>
+                            <li>Migrated multiple services from <strong>Spring Boot to Node.js</strong> and <strong>PostgreSQL</strong>, achieving a <strong>60% infrastructure cost reduction</strong></li>
+                            <li>Developed <strong>Elasticsearch-based</strong> search solutions for complex vehicle data analytics, reducing query response time by <strong>70%</strong></li>
+                            <li>Implemented <strong>AI-powered natural language search</strong> converting user queries into Elasticsearch DSL for intuitive data discovery</li>
+                            <li>Hands-on experience with <strong>Jenkins, Prometheus, ELK Stack, Docker, Kubernetes, AWS</strong></li>
+                        </ul>
                     </div>
                 </div>
 
-                <!-- project 3 -->
-                <div class="project_card">
-                    <div class="project_img">
-                        <img src="./Images/project3.png" alt="">
+                <!-- Experience 2 - Infosys -->
+                <div class="experience_card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="experience_header">
+                        <h3 class="experience_title">Operations Executive (Automation Tester)</h3>
+                        <p class="experience_company">Infosys, Chennai</p>
+                        <p class="experience_date">Dec 2020 – Apr 2022</p>
                     </div>
-                    <div class="project_detail">
-                        <p class="project_title">GYMWOLF</p>
-                        <p class="project_desc">This was a group project. I worked on 2 webpages of this website which is Online Personal
-                            Trainer page and Take a tour page. Also contributed in navbar features and it's responsiveness.</p>
-                    </div>
-                    <div class="project_tech-stack">
-                        <div class="flex justify-center">
-                            <p class="font-600 text-[.8rem]">Tech Stack :</p>
-                            <p class="font-500 text-[.8rem] ">HTML , </p>
-                            <p class="font-500 text-[.8rem] ">CSS , </p>
-                            <p class="font-500 text-[.8rem] ">JS </p>
-                        </div>
-                    </div>
-                    <div class="project_links flex">
-                        <a href="https://github.com/LV-23/envious-cactus-6437" target="_blank">
-                            <div>
-                                <p>GitHub</p>
-                            </div>
-                        </a>
-                        <a href="https://envious-cactus-6437.netlify.app/" target="_blank">
-                            Demo
-                        </a>
+                    <div class="experience_content">
+                        <ul class="experience_list">
+                            <li>Developed test automation frameworks using <strong>Selenium</strong> and <strong>Java</strong> for US banking applications</li>
+                            <li>Designed and executed <strong>REST API</strong> test end-to-end testing scenarios ensuring robust software quality</li>
+                            <li>Conducted <strong>functional, regression, and integration testing</strong> across multiple release cycles</li>
+                            <li>Managed test data in <strong>MySQL databases</strong> and validated integrity across system integrations</li>
+                            <li>Earned client recognition for consistent, high-quality MVP releases</li>
+                        </ul>
                     </div>
                 </div>
 
-                <!-- project 4 -->
-                <div class="project_card">
-                    <div class="project_img">
-                        <img src="./Images/project4.png" alt="">
+            </div>
+        </section>
+
+        <!--Education section-->
+        <section class="education section" id="education">
+            <h2 class="section_title" data-aos="fade-down">Education</h2>
+            <div class="education_container bd_grid">
+                
+                <div class="education_card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="education_icon">
+                        <i class='bx bxs-graduation'></i>
                     </div>
-                    <div class="project_detail">
-                        <p class="project_title">kickstarter</p>
-                        <p class="project_desc">This project is to create a webpage of kickstarter website. I worked individually
-                            on this and created the "start a page" webpage and login functionality. Used local storage for login and 
-                            logout.
-                        </p>
-                    </div>
-                    <div class="project_tech-stack">
-                        <div class="flex justify-center">
-                            <p class="font-600 text-[.8rem]">Tech Stack :</p>
-                            <p class="font-500 text-[.8rem] ">HTML , </p>
-                            <p class="font-500 text-[.8rem] ">CSS , </p>
-                            <p class="font-500 text-[.8rem] ">JS </p>
-                        </div>
-                    </div>
-                    <div class="project_links flex">
-                        <a href="https://github.com/ramkumar-26/organic-pets-4780" target="_blank">
-                            <div>
-                                <p>GitHub</p>
-                            </div>
-                        </a>
-                        <a href="https://brilliant-taiyaki-c5f2d7.netlify.app/" target="_blank">
-                            Demo
-                        </a>
+                    <div class="education_content">
+                        <h3 class="education_title">Bachelor of Computer Application in Cloud Technology</h3>
+                        <p class="education_institution">Crescent Institute of Science & Technology, Chennai</p>
+                        <p class="education_date">Jul 2017 – Aug 2020</p>
                     </div>
                 </div>
 
-                <div class="project_card" id="more-projects">
-                   
-                    <p>More works to come...</p>
-                    
+                <div class="education_card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="education_icon">
+                        <i class='bx bxs-book-content'></i>
+                    </div>
+                    <div class="education_content">
+                        <h3 class="education_title">Full Stack Web Development Program</h3>
+                        <p class="education_institution">Masai School (Online Bootcamp)</p>
+                        <p class="education_date">May 2020 – Mar 2023</p>
+                    </div>
                 </div>
+
+            </div>
         </section>
 
         <!-- Github stats -->
         <section class="github section" id="github">
-            <div id="github_stats">
-                <div class="stats_container">
-                    <h1 class="section_title" data-aos="fade-down">Github Stats</h1>
-                    <div class="github-stats-list">
-                        <div class="github-stat">
-                            <img data-aos="fade-down" data-aos-delay="100"
-                                src="https://github-readme-stats.vercel.app/api/top-langs?username=ramkumar-26&amp;show_icons=true&amp;theme=dark&amp;title_color=fb8d0e&amp;text_color=fcfcfc&amp;locale=en&amp;layout=compact"
-                                alt="ramkumar-26" height="275px" width="30%">
-                        </div>
-                        <div class="github-stat">
-                            <img data-aos="fade-down" data-aos-delay="100"
-                                src="https://github-readme-streak-stats.herokuapp.com/?user=ramkumar-26&amp;theme=highcontrast"
-                                alt="Github Contributions">
-                        </div>
-                        <div class="github-stat">
-                            <img data-aos="fade-down" data-aos-delay="100"
-                                src="https://github-readme-stats.vercel.app/api?username=ramkumar-26&amp;theme=highcontrast&amp;show_icons=true&amp;count_private=true"
-                                alt="Github Stats">
-                        </div>
-                        <div class="github-stat" id="most-lang">
-                            <img data-aos="fade-down" data-aos-delay="100"
-                                src="https://github-readme-activity-graph.cyclic.app/graph?username=ramkumar-26&theme=high-contrast	"
-                                alt="Github Graph">
-                        </div>
+            <h2 class="section_title" data-aos="fade-down">GitHub Activity</h2>
+            <div class="github_container bd_grid">
+                <div class="github-stats-grid">
+                    <div class="github-stat" data-aos="fade-up" data-aos-delay="100">
+                        <img src="https://github-readme-stats.vercel.app/api?username=ramkumar-26&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117&title_color=F85D7F&icon_color=F8D866&count_private=true"
+                            alt="GitHub Stats">
+                    </div>
+                    <div class="github-stat" data-aos="fade-up" data-aos-delay="200">
+                        <img src="https://github-readme-streak-stats.herokuapp.com/?user=ramkumar-26&theme=radical&hide_border=true&background=0D1117&ring=F85D7F&fire=F8D866&currStreakLabel=F85D7F"
+                            alt="GitHub Streak">
                     </div>
                 </div>
+                
+                <div class="github-stat-full" data-aos="fade-up" data-aos-delay="300">
+                    <img src="https://github-readme-activity-graph.vercel.app/graph?username=ramkumar-26&theme=react-dark&hide_border=true&area=true&bg_color=0D1117&color=F85D7F&line=F8D866&point=FFFFFF"
+                        alt="GitHub Activity Graph">
+                </div>
 
-
-
-            </div>
-            <!-- Prepare a container for your calendar. -->
-            <div class="calendar">
-                <!-- Loading stuff -->
-                Loading the data just for you.
+                <div class="github-calendar-container" data-aos="fade-up" data-aos-delay="400">
+                    <h3 class="github-calendar-title">Contribution Calendar</h3>
+                    <div class="calendar">
+                        Loading GitHub contributions...
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -477,7 +462,7 @@
             <p class="footer_title">Ramkumar Dhayalan &#128150; </p>
             <div class="footer_socials">
                 
-                <a href="https://www.linkedin.com/in/connect-with-ramkumar/" target="_blank" class="footer_social_icon">
+                <a href="https://www.linkedin.com/in/connect-ramkumar/" target="_blank" class="footer_social_icon">
                     <i class='bx bxl-linkedin'></i>
                 </a>
                 <a href="https://github.com/ramkumar-26" target="_blank" class="footer_social_icon">
@@ -486,11 +471,11 @@
                 <a href="mailto:ramkumar.ds26@gmail.com" target="_blank" class="footer_social_icon">
                     <i class='bx bx-envelope'></i>
                 </a>
-                <a href="./Files/Ramkumar_D_Resume.pdf" download target="_blank" class="footer_social_icon">
+                <a href="./Files/RAMKUMAR_D_BACKEND_ENGINEER.pdf" download target="_blank" class="footer_social_icon">
                     <i class='bx bx-download'></i>
                 </a>
-                <a href="" download target="_blank" class="footer_social_icon" >
-                    <i  class='bx bxs-phone-call'>  +91 9094070782 </i>
+                <a href="tel:+916383649920" target="_blank" class="footer_social_icon" >
+                    <i  class='bx bxs-phone-call'>  +91 6383649920 </i>
                 </a>
 
                 <div class="count">
@@ -521,10 +506,21 @@
         });
     </script>
 
-    <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js">
-    </script>
+    <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
     <script>
-        GitHubCalendar(".calendar", "ramkumar-26", { responsive: true });
+        // Initialize GitHub Calendar with error handling
+        document.addEventListener('DOMContentLoaded', function() {
+            try {
+                GitHubCalendar(".calendar", "ramkumar-26", { 
+                    responsive: true,
+                    tooltips: true,
+                    global_stats: true
+                });
+            } catch (error) {
+                console.error('Error loading GitHub calendar:', error);
+                document.querySelector('.calendar').innerHTML = '<p style="color: #fff; text-align: center;">Unable to load GitHub contributions. Please check your internet connection.</p>';
+            }
+        });
     </script>
    
 

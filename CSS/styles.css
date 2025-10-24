@@ -16,6 +16,47 @@
     --white: #fff;
     --black: black;
     --gradient-color : linear-gradient(to right,#3C1053FF,#DF6589FF);
+    
+    /* Light theme (default) */
+    --body-bg: #fff;
+    --text-color: #3C1053FF;
+    --card-bg: #f8f9fa;
+    --header-bg: #fff;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Dark theme */
+body.dark-theme {
+    --body-bg: #0e1117;
+    --text-color: #e0e0e0;
+    --card-bg: #1a1d29;
+    --header-bg: #0e1117;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --second-color: #e0e0e0;
+}
+
+/* Dark theme specific adjustments */
+body.dark-theme .nav_logo {
+    color: #e0e0e0;
+}
+
+body.dark-theme .section_title {
+    color: #F85D7F;
+}
+
+body.dark-theme .about_text,
+body.dark-theme .skill-name {
+    color: #e0e0e0;
+}
+
+body.dark-theme .contact_input {
+    background-color: #1a1d29;
+    color: #e0e0e0;
+    border-color: #2a2d39;
+}
+
+body.dark-theme .contact_input::placeholder {
+    color: #888;
 }
 /* github calender color */
 :root {
@@ -72,7 +113,9 @@ body{
     margin: var(--header-height) 0 0 0;
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
-    color: var(--second-color);
+    color: var(--text-color);
+    background-color: var(--body-bg);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 h1,h2,p{
@@ -112,9 +155,9 @@ img{
     top: 0;
     left: 0;
     z-index: var(--z-fixed);
-    background: #fff;
-    box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
-
+    background: var(--header-bg);
+    box-shadow: 0 1px 4px var(--shadow-color);
+    transition: background-color 0.3s ease;
 }
 
 /* navbar */
@@ -166,9 +209,30 @@ img{
 } 
 
 .nav_toggle{
-    color: var(--second-color);
+    color: var(--text-color);
     font-size: 1.5rem;
     cursor: pointer;
+}
+
+/* Theme Toggle Button */
+.theme_toggle {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-left: 1rem;
+    transition: color 0.3s ease;
+}
+
+.theme_toggle:hover {
+    color: var(--first-color);
+}
+
+.theme_toggle i {
+    transition: transform 0.3s ease;
+}
+
+.theme_toggle:hover i {
+    transform: rotate(20deg);
 }
 
 .nav_logo {
@@ -343,10 +407,12 @@ Skills */
 
 
 .skills-content .column {
-    width: calc(50% - 30px);
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    width: 100%;
+    gap: 1rem;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
 }
 
 .skills-images{
@@ -372,6 +438,8 @@ Skills */
 .column{
     /* border: 1px solid red; */
     border-radius: 20px;
+    margin-bottom: 2rem;
+    clear: both;
 }
 
 /* Project */
@@ -608,7 +676,7 @@ audio, canvas, embed, iframe, img, object, svg, video {
     }
 
     .skills-images{
-        margin-top: -20px;
+        margin: 1rem;
     }
 
     .project_container .project_card {
@@ -661,6 +729,10 @@ audio, canvas, embed, iframe, img, object, svg, video {
     .nav_toggle{
         display: none;
     }
+    
+    .theme_toggle {
+        margin-left: auto;
+    }
     .nav_link{
         color: var(--second-color);
     }
@@ -704,11 +776,14 @@ audio, canvas, embed, iframe, img, object, svg, video {
     }
    
     .skills-content .column {
-        width: calc(50% - 30px);
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
         width: 100%;
-        row-gap: 20%;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 3rem;
+        padding-bottom: 3rem;
+        margin-bottom: 3rem;
+        width: 100%;
+        row-gap: 3rem;
     }
     .skills-content{
         display: flex;
@@ -769,22 +844,293 @@ audio, canvas, embed, iframe, img, object, svg, video {
 
 
     /* Github stats */
-    .github-stats-list {
+    .github-stats-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-        margin-top: 50px;
-        grid-gap: 40px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        margin-bottom: 2rem;
     }
+    
     .github-stat {
-        border-radius: 10px;
-        position: relative;
+        border-radius: 15px;
         overflow: hidden;
+        background: #0D1117;
+        padding: 1rem;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease;
     }
-     .github-stat {
-         padding-bottom: 30px;
-     }
-     .github-stat img{
-         width: 100%;
-     }
+    
+    .github-stat:hover {
+        transform: translateY(-5px);
+    }
+    
+    .github-stat img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    
+    .github-stat-full {
+        border-radius: 15px;
+        overflow: hidden;
+        background: #0D1117;
+        padding: 1rem;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        margin-bottom: 2rem;
+    }
+    
+    .github-stat-full img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    
+    .github-calendar-container {
+        background: #0D1117;
+        border-radius: 15px;
+        padding: 2rem;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+    
+    .github-calendar-title {
+        color: #F85D7F;
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+        text-align: center;
+        font-weight: 600;
+    }
+    
+    /* GitHub Calendar specific styles */
+    .calendar {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+        border: none;
+        min-height: 200px;
+    }
+    
+    .calendar .contrib-column {
+        padding: 0;
+    }
+    
+    .calendar .contrib-number {
+        color: #fff;
+    }
+    
+    .calendar svg {
+        max-width: 100%;
+        overflow: visible;
+    }
+}
+
+/* Experience Section Styles */
+.experience_container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    margin-top: 1rem;
+    clear: both;
+}
+
+.experience_card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience_card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.experience_header {
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 1rem;
+}
+
+.experience_title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.experience_company {
+    font-size: 1.1rem;
+    color: #f0f0f0;
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+}
+
+.experience_date {
+    font-size: 0.9rem;
+    color: #e0e0e0;
+    font-style: italic;
+}
+
+.experience_content {
+    color: #fff;
+}
+
+.experience_list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.experience_list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    color: #f5f5f5;
+}
+
+.experience_list li:before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: #64ffda;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.experience_list li strong {
+    color: #64ffda;
+    font-weight: 600;
+}
+
+@media screen and (min-width: 768px) {
+    .experience_container {
+        padding: 3rem 2rem;
+    }
+    
+    .experience_card {
+        padding: 2.5rem;
+    }
+    
+    .experience_title {
+        font-size: 1.8rem;
+    }
+    
+    .experience_company {
+        font-size: 1.2rem;
+    }
+}
+
+/* Mobile responsive for GitHub section */
+@media screen and (max-width: 768px) {
+    .github-stats-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .github-stat, .github-stat-full, .github-calendar-container {
+        padding: 0.5rem;
+    }
+    
+    .github-calendar-title {
+        font-size: 1.2rem;
+    }
+}
+
+/* Additional improvements */
+.github_container {
+    padding: 2rem 1rem;
+}
+
+.section {
+    padding: 4rem 0 2rem;
+    clear: both;
+    position: relative;
+}
+
+.skills.section {
+    margin-bottom: 2rem;
+}
+
+.experience.section {
+    margin-top: 2rem;
+}
+
+/* Responsive section spacing */
+@media screen and (min-width: 768px) {
+    .skills.section {
+        margin-bottom: 4rem;
+    }
+    
+    .experience.section {
+        margin-top: 4rem;
+    }
+}
+
+/* Education Section Styles */
+.education_container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.education_card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 15px;
+    padding: 2rem;
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education_card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.education_icon {
+    font-size: 3rem;
+    color: #64ffda;
+    flex-shrink: 0;
+}
+
+.education_content {
+    flex: 1;
+}
+
+.education_title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+.education_institution {
+    font-size: 1rem;
+    color: #f0f0f0;
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+}
+
+.education_date {
+    font-size: 0.9rem;
+    color: #e0e0e0;
+    font-style: italic;
+}
+
+@media screen and (max-width: 768px) {
+    .education_container {
+        grid-template-columns: 1fr;
+    }
+    
+    .education_card {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
 }
 

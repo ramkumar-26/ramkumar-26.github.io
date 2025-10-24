@@ -34,7 +34,7 @@ function send() {
     let email = document.getElementById("input-2").value;
     let msg = document.getElementById("input-3").value;
     if(name=="" || email=="" || msg==""){
-        alertt ("Please Enter All The Fields!");
+        alert ("Please Enter All The Fields!");
     }else{
         document.getElementById("input-1").value="";
         document.getElementById("input-2").value="";
@@ -42,3 +42,32 @@ function send() {
         alert ("Thank You for Contacting! Message sent Successfully!");
     }
  }
+
+// Theme Toggle Functionality
+const themeToggle = document.getElementById('theme_toggle');
+const themeIcon = document.getElementById('theme_icon');
+const body = document.body;
+
+// Check for saved theme preference or default to light mode
+const currentTheme = localStorage.getItem('theme') || 'light';
+if (currentTheme === 'dark') {
+    body.classList.add('dark-theme');
+    themeIcon.classList.remove('bx-moon');
+    themeIcon.classList.add('bx-sun');
+}
+
+// Theme toggle event listener
+themeToggle.addEventListener('click', () => {
+    body.classList.toggle('dark-theme');
+    
+    // Change icon
+    if (body.classList.contains('dark-theme')) {
+        themeIcon.classList.remove('bx-moon');
+        themeIcon.classList.add('bx-sun');
+        localStorage.setItem('theme', 'dark');
+    } else {
+        themeIcon.classList.remove('bx-sun');
+        themeIcon.classList.add('bx-moon');
+        localStorage.setItem('theme', 'light');
+    }
+});
